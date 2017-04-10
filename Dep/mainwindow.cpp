@@ -39,6 +39,8 @@ MainWindow::MainWindow(QWidget *parent) :
          QObject::connect(ui->suppValider_pushButton,SIGNAL(clicked(bool)),this,SLOT(supprimerItem()));
          QObject::connect(ui->suppItemFac_pushButton,SIGNAL(clicked(bool)),this,SLOT(supprimerItemFacture()));
 
+         QSound::play("Ookay.wav");
+
 
          //=============ToolTip============================================================================
          ui->recherche_pushButton->setToolTip("Faire une recherche dans la base de donnée");

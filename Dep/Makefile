@@ -246,9 +246,11 @@ Makefile: Dep.pro C:\Qt\5.8\msvc2015_64\mkspecs\win32-msvc2015\qmake.conf C:\Qt\
 		C:\Qt\5.8\msvc2015_64\mkspecs\features\lex.prf \
 		Dep.pro \
 		C:\Qt\5.8\msvc2015_64\lib\qtmaind.prl \
+		C:\Qt\5.8\msvc2015_64\lib\Qt5Multimedia.prl \
 		C:\Qt\5.8\msvc2015_64\lib\Qt5Widgets.prl \
 		C:\Qt\5.8\msvc2015_64\lib\Qt5Gui.prl \
 		C:\Qt\5.8\msvc2015_64\lib\Qt5Sql.prl \
+		C:\Qt\5.8\msvc2015_64\lib\Qt5Network.prl \
 		C:\Qt\5.8\msvc2015_64\lib\Qt5Core.prl
 	$(QMAKE) -o Makefile Dep.pro -spec win32-msvc2015 "CONFIG+=debug" "CONFIG+=qml_debug"
 C:\Qt\5.8\msvc2015_64\mkspecs\features\spec_pre.prf:
@@ -424,9 +426,11 @@ C:\Qt\5.8\msvc2015_64\mkspecs\features\yacc.prf:
 C:\Qt\5.8\msvc2015_64\mkspecs\features\lex.prf:
 Dep.pro:
 C:\Qt\5.8\msvc2015_64\lib\qtmaind.prl:
+C:\Qt\5.8\msvc2015_64\lib\Qt5Multimedia.prl:
 C:\Qt\5.8\msvc2015_64\lib\Qt5Widgets.prl:
 C:\Qt\5.8\msvc2015_64\lib\Qt5Gui.prl:
 C:\Qt\5.8\msvc2015_64\lib\Qt5Sql.prl:
+C:\Qt\5.8\msvc2015_64\lib\Qt5Network.prl:
 C:\Qt\5.8\msvc2015_64\lib\Qt5Core.prl:
 qmake: FORCE
 	@$(QMAKE) -o Makefile Dep.pro -spec win32-msvc2015 "CONFIG+=debug" "CONFIG+=qml_debug"

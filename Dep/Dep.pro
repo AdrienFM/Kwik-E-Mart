@@ -6,6 +6,7 @@
 
 QT       += core gui
 QT       += sql
+QT       += multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -32,3 +33,6 @@ HEADERS  += mainwindow.h
 FORMS    += mainwindow.ui
 
 RC_ICONS = KEM_logo.ico
+
+RESOURCES += \
+    ressources.qrc
