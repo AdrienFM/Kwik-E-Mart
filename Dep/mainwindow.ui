@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1287</width>
+    <height>765</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTabWidget" name="InvMod_tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>140</y>
+      <width>591</width>
+      <height>531</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Inventaire</string>
+     </attribute>
+     <widget class="QTableView" name="inv_tableView">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>551</width>
+        <height>461</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Modification</string>
+     </attribute>
+     <widget class="QWidget" name="gridLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>50</y>
+        <width>501</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="2" column="0">
+        <widget class="QLabel" name="prix_label">
+         <property name="text">
+          <string>Prix</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="rabais_label">
+         <property name="text">
+          <string>Rabais</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <widget class="QLineEdit" name="prix_lineEdit"/>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="nom_label">
+         <property name="text">
+          <string>Nom</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="quantite_label">
+         <property name="text">
+          <string>Quantité</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QLineEdit" name="nom_lineEdit"/>
+       </item>
+       <item row="3" column="3">
+        <widget class="QLineEdit" name="rabais_lineEdit"/>
+       </item>
+       <item row="1" column="3">
+        <widget class="QSpinBox" name="quantiteInventaire_spinBox"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>230</y>
+        <width>501</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="optionMod_horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="ajouter_pushButton">
+         <property name="text">
+          <string>Ajouter</string>
+         </property>
+         <property name="shortcut">
+          <string>Ctrl+D</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="recherche_pushButton">
+         <property name="text">
+          <string>Rechercher</string>
+         </property>
+         <property name="shortcut">
+          <string>Ctrl+R</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="annuler_pushButton">
+         <property name="text">
+          <string>Annuler</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>280</y>
+        <width>501</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="mod_pushButton">
+         <property name="text">
+          <string>Modification</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="modItem_pushButton">
+         <property name="text">
+          <string>Modifier un item</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="supItem_pushButton">
+         <property name="text">
+          <string>Supprimer un item</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>340</y>
+        <width>251</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="Mod_gridLayout">
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="newItemID_lineEdit"/>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="newItemID_label">
+         <property name="text">
+          <string>ID du produit</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="newName_lineEdit"/>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="validerMod_pushButton">
+         <property name="text">
+          <string>Valider</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="newName_label">
+         <property name="text">
+          <string>Nouveau nom</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>340</y>
+        <width>231</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="supp_gridLayout">
+       <item row="0" column="1">
+        <widget class="QLabel" name="supp_label">
+         <property name="text">
+          <string>Nom item</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLineEdit" name="supp_lineEdit"/>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="suppValider_pushButton">
+         <property name="text">
+          <string>Valider</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="facture_frame">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>140</y>
+      <width>591</width>
+      <height>531</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QTableWidget" name="litem_tabWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>571</width>
+       <height>351</height>
+      </rect>
+     </property>
+     <column>
+      <property name="text">
+       <string>ID</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Quantité</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Nom</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Rabais</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Prix</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>380</y>
+       <width>290</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="ajItemListe_horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="ajItem_pushButton">
+        <property name="text">
+         <string>Ajouter</string>
+        </property>
+        <property name="shortcut">
+         <string>Enter, Return</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="ajouterID_label">
+        <property name="text">
+         <string>ID</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="ajItem_lineEdit"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="quantiteItem_label">
+        <property name="text">
+         <string>Quantité</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="quantiteFacture_spinBox"/>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>380</y>
+       <width>81</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="taxTotal_lineEdit_verticalLayout">
+      <item>
+       <widget class="QLineEdit" name="sousTotal_lineEdit">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="tps_lineEdit">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="tvq_lineEdit">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="total_lineEdit">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>380</y>
+       <width>51</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="taxTotal_label_verticalLayout">
+      <item>
+       <widget class="QLabel" name="sousTotal_label">
+        <property name="text">
+         <string>Sous-total</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="tps_label">
+        <property name="text">
+         <string>Tps :</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="tvq_label">
+        <property name="text">
+         <string>Tvq :</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="total_label">
+        <property name="text">
+         <string>Total :</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget_5">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>480</y>
+       <width>271</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QPushButton" name="Annuler_pushButton">
+        <property name="toolTipDuration">
+         <number>-5</number>
+        </property>
+        <property name="text">
+         <string>Annuler la facture</string>
+        </property>
+        <property name="shortcut">
+         <string>Ctrl+Q</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>430</y>
+       <width>271</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="suppItemFac_horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="suppItemFac_pushButton">
+        <property name="text">
+         <string>Supprimer</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="suppItemFac_lineEdit"/>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="logo_label">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>20</y>
+      <width>961</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="pixmap">
+     <pixmap>../Logo/Bannière.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>680</y>
+      <width>751</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="info_horizontalLayout" stretch="0,0,0,0">
+     <property name="spacing">
+      <number>10</number>
+     </property>
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <item>
+      <widget class="QLabel" name="ville_label">
+       <property name="text">
+        <string>Springfield</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="adresse_label">
+       <property name="text">
+        <string>60210</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="numTel_label">
+       <property name="text">
+        <string>+1 212-759-6600</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="proprio_label">
+       <property name="text">
+        <string>Apu Nahasapeemapetilon</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="alpha_label">
+    <property name="geometry">
+     <rect>
+      <x>1240</x>
+      <y>10</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Alpha 1.1</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1287</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>nom_lineEdit</tabstop>
+  <tabstop>prix_lineEdit</tabstop>
+  <tabstop>rabais_lineEdit</tabstop>
+  <tabstop>ajouter_pushButton</tabstop>
+  <tabstop>recherche_pushButton</tabstop>
+  <tabstop>annuler_pushButton</tabstop>
+  <tabstop>mod_pushButton</tabstop>
+  <tabstop>modItem_pushButton</tabstop>
+  <tabstop>supItem_pushButton</tabstop>
+  <tabstop>newItemID_lineEdit</tabstop>
+  <tabstop>newName_lineEdit</tabstop>
+  <tabstop>validerMod_pushButton</tabstop>
+  <tabstop>supp_lineEdit</tabstop>
+  <tabstop>suppValider_pushButton</tabstop>
+  <tabstop>InvMod_tabWidget</tabstop>
+  <tabstop>litem_tabWidget</tabstop>
+  <tabstop>ajItem_lineEdit</tabstop>
+  <tabstop>ajItem_pushButton</tabstop>
+  <tabstop>sousTotal_lineEdit</tabstop>
+  <tabstop>tps_lineEdit</tabstop>
+  <tabstop>tvq_lineEdit</tabstop>
+  <tabstop>total_lineEdit</tabstop>
+  <tabstop>Annuler_pushButton</tabstop>
+  <tabstop>inv_tableView</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Annuler_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>litem_tabWidget</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>187</x>
+     <y>670</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>183</x>
+     <y>486</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Annuler_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>sousTotal_lineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>229</x>
+     <y>674</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>514</x>
+     <y>566</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Annuler_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>tps_lineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>224</x>
+     <y>666</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>521</x>
+     <y>593</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Annuler_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>tvq_lineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>657</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>524</x>
+     <y>619</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Annuler_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>total_lineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>241</x>
+     <y>665</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>514</x>
+     <y>645</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Annuler_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>suppItemFac_lineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>138</x>
+     <y>675</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>155</x>
+     <y>612</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
